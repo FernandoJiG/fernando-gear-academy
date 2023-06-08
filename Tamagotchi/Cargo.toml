@@ -1,0 +1,17 @@
+[package]
+name = "tamagotchi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", features = ["debug"], rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+scale-info = { version = "2", default-features = false, features = ["derive"] }
+parity-scale-codec = { version = "3", default-features = false }
+tamagotchi-io ={path = "io"}
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", features = ["wasm-opt"], rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
+tamagotchi-io ={path = "io"}
+
+[dev-dependencies]
+gtest = { git = "https://github.com/gear-tech/gear.git", rev = "5c685d0f15c412ab6ee019ceaf7ce084426dfb68" }
