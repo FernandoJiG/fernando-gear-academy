@@ -1,0 +1,32 @@
+[package]
+name = "escrow"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gstd = { workspace = true, features = ["debug"] }
+scale-info = { workspace = true, features=["derive"]}
+parity-scale-codec.workspace = true
+escrow-io.workspace =true
+
+[build-dependencies]
+gear-wasm-builder.workspace = true
+escrow-io.workspace = true
+
+[dev-dependencies]
+gtest.workspace = true
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Fernando Jimenez"]
+
+[workspace.dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", rev = "78dfa07" }
+scale-info = { version = "2", default-features = false }
+parity-scale-codec = { version = "3", default-features = false }
+escrow-io ={path = "io"}
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", features = ["wasm-opt"], rev = "78dfa07" }
+gear-lib = { git = "https://github.com/gear-dapps/gear-lib.git", tag = "0.3.7" }
+gtest = { git = "https://github.com/gear-tech/gear.git", rev = "78dfa07" }
+gmeta = { git = "https://github.com/gear-tech/gear", rev = "78dfa07" }

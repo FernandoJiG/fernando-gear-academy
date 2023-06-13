@@ -1,0 +1,12 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[package]
+name = "escrow-io"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+gstd.workspace = true
+gear-lib.workspace = true
+gmeta = { workspace = true, features = ["codegen"] }
